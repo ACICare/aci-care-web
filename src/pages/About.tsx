@@ -1,51 +1,59 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { Home, LogIn, Wifi, FileText, Settings, Bot, Circle } from "lucide-react";
-import styles from './Prototype.module.css';
+import { Brain, LogIn, Home, Book, Settings, Bot, Circle } from "lucide-react";
+import styles from './About.module.css';
+import frameUrl from '/assets/images/frame.png';
 
-const Prototype = () => {
+const About = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   
   // Ref para detectar quando a seção está visível
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
-  // Dados das tabs
+  // Dados das tabs com caminho de imagens (substitua pelos seus arquivos em public/assets/images)
   const tabs = [
     {
+      label: <Brain className={styles.icon} />,
+      title: "Outset",
+      description: "Conheça o Neuro27, crie sua conta ou faça login!",
+      imageSrc: "/src/assets/images/outset.png",
+    },
+    {
       label: <LogIn className={styles.icon} />,
-      title: "Cadastro e Login",
-      description: "Cadastre-se rapidamente e faça login com segurança.",
+      title: "Tela de Login",
+      description: "Logue em sua conta para começar a aprender.",
+      imageSrc: "/src/assets/images/login.png",
     },
     {
       label: <Home className={styles.icon} />,
-      title: "Tela Inicial",
-      description: "Acompanhe seu progresso e acesse tudo de forma prática.",
+      title: "Home",
+      description: "Aprenda da melhor maneira seguindo a nossa estrutura recomendada!",
+      imageSrc: "/src/assets/images/home.png",
     },
     {
-      label: <Wifi className={styles.icon} />,
-      title: "Roteadores",
-      description: "Gerencie seus roteadores e conexões facilmente.",
-    },
-    {
-      label: <FileText className={styles.icon} />,
-      title: "Relatórios",
+      label: <Book className={styles.icon} />,
+      title: "Capítulos",
       description: "Visualize relatórios detalhados sobre o uso do app.",
+      imageSrc: "/assets/images/about-reports.jpg",
     },
     {
       label: <Settings className={styles.icon} />,
       title: "Configurações",
       description: "Personalize o app de acordo com suas preferências.",
+      imageSrc: "/assets/images/about-settings.jpg",
     },
     {
       label: <Bot className={styles.icon} />,
       title: "Chatbot",
       description: "Converse com o assistente virtual para suporte rápido.",
+      imageSrc: "/assets/images/about-chatbot.jpg",
     },
   ];
 
   return (
     <motion.section 
+      id="about"
       ref={sectionRef}
       className={styles.section}
       initial={{ opacity: 0 }}
@@ -94,15 +102,22 @@ const Prototype = () => {
           >
             {/* Área para imagem do app */}
             <div className={styles.phoneScreen}>
-              {/* Aqui você pode adicionar suas imagens */}
-              <div className={styles.placeholder}>
-                <span className={styles.placeholderText}>{tabs[activeIndex].title}</span>
-              </div>
+              {tabs[activeIndex].imageSrc ? (
+                <img
+                  src={tabs[activeIndex].imageSrc}
+                  alt={tabs[activeIndex].title}
+                  className={styles.phoneImage}
+                />
+              ) : (
+                <div className={styles.placeholder}>
+                  <span className={styles.placeholderText}>{tabs[activeIndex].title}</span>
+                </div>
+              )}
             </div>
 
             {/* Frame do celular */}
             <img 
-              src="/assets/images/frame.png" 
+              src={frameUrl}
               alt="Mockup celular" 
               className={styles.phoneFrame}
             />
@@ -145,4 +160,4 @@ const Prototype = () => {
   );
 };
 
-export default Prototype;
+export default About;
