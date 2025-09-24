@@ -1,82 +1,112 @@
+/* src/components/Hero/Hero.module.css */
+
+/* ========================================= *
+ *  Estilos da Seção Hero
+ * ========================================= */
+
+/* Seção principal do Hero */
 .hero {
-  min-height: 100vh;
+  min-height: 100vh; /* Garante que a seção ocupe a altura total da viewport */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #001C2A;
-  color: white;
-  padding-top: 72px;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  background-color: #001C2A; /* Cor de fundo escura */
+  color: white; /* Cor do texto */
+  padding-top: 72px; /* Espaçamento no topo para acomodar o header fixo */
 }
 
+/* Wrapper para limitar a largura do conteúdo */
 .wrapper {
   width: 100%;
 }
 
+/* Container principal com layout em grid */
 .container {
   max-width: 95%;
   padding: 2rem;
-  margin: 0 auto;
+  margin: 0 auto; /* Centraliza o container */
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center;
-  gap: 2rem;
+  grid-template-columns: 1.2fr 1fr; /* Duas colunas com proporções diferentes */
+  align-items: center; /* Alinha os itens do grid verticalmente */
+  gap: 2rem; /* Espaçamento entre as colunas */
 }
 
+/* ========================================= *
+ *  Estilos do Conteúdo (Texto e Visual)
+ * ========================================= */
+
+/* Seção de texto (copy) */
+.copy {
+  /* O conteúdo de texto é organizado pelo grid do .container */
+}
+
+/* Título principal */
+.title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no texto para dar profundidade */
+}
+
+/* Subtítulo */
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9; /* Leve transparência para suavizar o texto */
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}
+
+/* Seção visual (logo) */
 .visual {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Imagem da logo */
 .logo {
   width: 450px;
-  max-width: 40vw;
+  max-width: 40vw; /* Largura máxima relativa à viewport */
   height: auto;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35)); /* Sombra para destacar a logo */
 }
 
-.title {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+/* ========================================= *
+ *  Estilos dos Botões de Ação
+ * ========================================= */
+
+/* Container para os botões */
+.actions {
+	display: flex;
+	gap: 12px; /* Espaçamento entre os botões */
+	align-items: center;
 }
 
-.subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
+/* Botão de Call to Action (CTA) primário */
 .ctaButton {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
   border: 2px solid white;
   color: white;
   padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 50px; /* Borda arredondada */
   cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  transition: all 0.3s ease; /* Transição suave para hover */
+  backdrop-filter: blur(10px); /* Efeito de vidro fosco no fundo */
 }
 
 .ctaButton:hover {
   background: white;
-  color: #667eea;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: #667eea; /* Cor do texto no hover */
+  transform: translateY(-2px); /* Efeito de elevação */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra no hover */
 }
 
-.actions {
-	display: flex;
-	gap: 12px;
-	align-items: center;
-}
+/* Botão de Call to Action (CTA) secundário */
 .ctaSecondary {
 	background: white;
-	color: #001C2A;
+	color: #001C2A; /* Cor do texto contrastante */
 	padding: 1rem 1.5rem;
 	font-size: 1.05rem;
 	font-weight: 600;
@@ -84,22 +114,31 @@
 	border: 2px solid white;
 	transition: all 0.3s ease;
 }
-.ctaSecondary:hover { filter: brightness(0.95); transform: translateY(-2px); }
 
+.ctaSecondary:hover {
+  filter: brightness(0.95); /* Escurece um pouco o botão no hover */
+  transform: translateY(-2px); /* Efeito de elevação */
+}
+
+/* ========================================= *
+ *  Responsividade (Media Queries)
+ * ========================================= */
+
+/* Para telas menores que 768px (tablets e celulares em paisagem) */
 @media (max-width: 768px) {
   .hero {
-    padding-top: 56px;
+    padding-top: 56px; /* Ajusta o espaçamento do topo */
   }
 
   .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Uma coluna para empilhar os elementos */
     max-width: 92%;
     padding: 1rem;
     gap: 1rem;
   }
 
   .visual {
-    order: -1;
+    order: -1; /* Move a imagem para cima do texto */
   }
 
   .logo {
@@ -120,12 +159,31 @@
     padding: 0.75rem 1.25rem;
   }
 
-  .actions { gap: 10px; }
-  .ctaSecondary { padding: 0.75rem 1.1rem; font-size: 1rem; }
+  .actions { 
+    gap: 10px; 
+  }
+
+  .ctaSecondary { 
+    padding: 0.75rem 1.1rem; 
+    font-size: 1rem; 
+  }
 }
 
+/* Para telas menores que 480px (celulares em retrato) */
 @media (max-width: 480px) {
-  .hero { padding-top: 48px; }
-  .container { max-width: 90%; padding: 0.75rem; gap: 0.75rem; }
-  .logo { width: 60vw; max-width: 520px; }
+  .hero { 
+    padding-top: 48px; 
+  }
+
+  .container { 
+    max-width: 90%; 
+    padding: 0.75rem; 
+    gap: 0.75rem; 
+  }
+
+  .logo { 
+    width: 60vw; 
+    max-width: 520px; 
+  }
 }
+
