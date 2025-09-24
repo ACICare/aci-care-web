@@ -7,7 +7,9 @@
 }
 
 .box {
-	max-width: 400px;
+	width: 400px;
+	min-height: 400px;
+	/* ou height: 400px; se quiser fixo */
 	margin: 56px auto;
 	padding: 50px;
 	background: #FBFBFB;
@@ -29,7 +31,7 @@
 .input {
 	padding: 10px 12px;
 	border-radius: 8px;
-	color: #e5e7eb;
+	color: #000000;
 	border: 1px solid #E0E0E0;
 }
 
