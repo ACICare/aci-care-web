@@ -68,8 +68,7 @@ export default function Header() {
         </nav>
 
         {/* Navegação mobile */}
-        {isMenuOpen && (
-          <nav className={styles.mobileNav}>
+        <nav className={`${styles.mobileNav} ${isMenuOpen ? styles.mobileNavOpen : ''}`}>
             <ul className={styles.mobileList}>
               {menuItems.map((item) => (
                 <li key={item.id}>
@@ -89,7 +88,6 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-        )}
       </div>
     </header>
   );
