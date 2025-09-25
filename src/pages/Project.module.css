@@ -1,0 +1,15 @@
+.projectSection {
+  min-height: 100vh; /* Altura mínima de 100% da viewport */
+  background-color: #001C2A; /* Cor de fundo escura */
+  padding-top: 72px; /* Espaçamento no topo para acomodar o header fixo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

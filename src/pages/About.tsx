@@ -1,5 +1,3 @@
-/* src/components/About/About.tsx */
-
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Brain, LogIn, Home, Book, LibraryBig, Circle } from "lucide-react";
@@ -36,8 +34,8 @@ const About = () => {
     { label: <Brain className={styles.icon} />, title: "Outset", description: "Descubra o Neuro27! Crie sua conta ou faça login para começar.", imageSrc: "/src/assets/images/outset.png" },
     { label: <LogIn className={styles.icon} />, title: "Tela de Login", description: "Acesse sua conta para continuar aprendendo de forma personalizada.", imageSrc: "/src/assets/images/login.png" },
     { label: <Home className={styles.icon} />, title: "Home", description: "Siga nossa estrutura recomendada e aprenda da forma mais eficiente!", imageSrc: "/src/assets/images/home.png" },
-    { label: <Book className={styles.icon} />, title: "Capítulos", description: "Aprenda capítulo por capítulo, facilitando a compreensão e retenção.", imageSrc: "/src/assets/images/about-reports.jpg" },
-    { label: <LibraryBig className={styles.icon} />, title: "Conteúdo", description: "Explore e estude os conteúdos detalhados de cada capítulo.", imageSrc: "/src/assets/images/about-settings.jpg" },
+    { label: <Book className={styles.icon} />, title: "Capítulos", description: "Aprenda capítulo por capítulo, facilitando a compreensão e retenção.", imageSrc: "/src/assets/images/Parte do cérebro = capítulos.png" },
+    { label: <LibraryBig className={styles.icon} />, title: "Conteúdo", description: "Explore e estude os conteúdos detalhados de cada capítulo.", imageSrc: "/src/assets/images/Conteúdo - Córtex Pré-frontal.png" },
 
   ];
 
@@ -148,7 +146,7 @@ const About = () => {
 
                 {/* Botão para o Figma */}
                 <motion.button
-                  onClick={() => window.open('https://www.figma.com/design/Jbgm1ifwh7qi16D9795VnK/Vion-%7C-Error-504?node-id=2001-501&t=6R9IGAyXVvrtssgC-1', '_blank')} // Abre link do Figma em nova aba
+                  onClick={() => window.open('https://www.figma.com/design/UtfIs8YdDuaveNGiOGdCU8/Neuro27---Design-de-Telas?node-id=464-105&t=gOrHPwp5FxtqudBe-1', '_blank')} // Abre link do Figma em nova aba
                   className={styles.figmaButton}
                   whileHover={{ scale: 1.05 }} // Efeito de escala ao passar o mouse
                   whileTap={{ scale: 0.95 }} // Efeito de escala ao clicar
