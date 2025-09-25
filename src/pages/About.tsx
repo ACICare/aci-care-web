@@ -31,11 +31,11 @@ const About = () => {
 
   // Definição das tabs com seus ícones, títulos, descrições e imagens correspondentes
   const tabs = [
-    { label: <Brain className={styles.icon} />, title: "Outset", description: "Descubra o Neuro27! Crie sua conta ou faça login para começar.", imageSrc: "/src/assets/images/outset.png" },
-    { label: <LogIn className={styles.icon} />, title: "Tela de Login", description: "Acesse sua conta para continuar aprendendo de forma personalizada.", imageSrc: "/src/assets/images/login.png" },
-    { label: <Home className={styles.icon} />, title: "Home", description: "Siga nossa estrutura recomendada e aprenda da forma mais eficiente!", imageSrc: "/src/assets/images/home.png" },
-    { label: <Book className={styles.icon} />, title: "Capítulos", description: "Aprenda capítulo por capítulo, facilitando a compreensão e retenção.", imageSrc: "/src/assets/images/Parte do cérebro = capítulos.png" },
-    { label: <LibraryBig className={styles.icon} />, title: "Conteúdo", description: "Explore e estude os conteúdos detalhados de cada capítulo.", imageSrc: "/src/assets/images/Conteúdo - Córtex Pré-frontal.png" },
+    { label: <Brain className={styles.icon} />, title: "Outset", description: "Descubra o Neuro27! Crie sua conta ou faça login para começar.", imageSrc: "/assets/images/outset.png" },
+    { label: <LogIn className={styles.icon} />, title: "Tela de Login", description: "Acesse sua conta para continuar aprendendo de forma personalizada.", imageSrc: "/assets/images/login.png" },
+    { label: <Home className={styles.icon} />, title: "Home", description: "Siga nossa estrutura recomendada e aprenda da forma mais eficiente!", imageSrc: "/assets/images/home.png" },
+    { label: <Book className={styles.icon} />, title: "Capítulos", description: "Aprenda capítulo por capítulo, facilitando a compreensão e retenção.", imageSrc: "/assets/images/Parte do cérebro = capítulos.png" },
+    { label: <LibraryBig className={styles.icon} />, title: "Conteúdo", description: "Explore e estude os conteúdos detalhados de cada capítulo.", imageSrc: "/assets/images/Conteúdo - Córtex Pré-frontal.png" },
 
   ];
 
@@ -70,7 +70,7 @@ const About = () => {
             animate={isFirstSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }} // Animação quando visível
             transition={{ duration: 0.8, delay: 0.6 }} // Duração e delay da transição (ajustado para 0.8s e 0.6s)
           >
-            <img src="/src/assets/images/telas.png" alt="Telas do aplicativo Neuro27" /> {/* Imagem principal */}
+            <img src="/assets/images/Telas.png" alt="Telas do aplicativo Neuro27" /> {/* Imagem principal */}
           </motion.div>
         </div>
       </motion.section>

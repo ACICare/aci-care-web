@@ -27,7 +27,7 @@ const Hero = () => {
             </div>
           </div>
           <div className={styles.visual}> {/* Seção visual (imagem/logo) */}
-            <img src="/src/assets/images/logo.png" alt="Logo do projeto" className={styles.logo} /> {/* Imagem da logo */}
+            <img src="/assets/images/logo.png" alt="Logo do projeto" className={styles.logo} /> {/* Imagem da logo */}
           </div>
         </div>
       </div>
