@@ -1,7 +1,7 @@
-/* Container principal com a imagem de fundo */
+/* Container principal com a imagem de fundo (noite) */
 .container {
   min-height: 100vh;
-  background-image: url("/assets/images/campos.jpg");
+  background-image: url("/assets/images/noite.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@
   z-index: 1;
 }
 
-/* Container do conteúdo principal */
+/* Estrutura compartilhada com Register */
 .content {
   display: flex;
   max-width: 900px;
@@ -41,7 +41,6 @@
   overflow: hidden;
 }
 
-/* Seção da imagem à esquerda */
 .imageSection {
   flex: 1;
   display: flex;
@@ -58,30 +57,12 @@
   background-size: cover;
   background-position: center;
   border-radius: 20px 0 0 20px;
-  /* Aresta direita inclinada (invertida verticalmente) e topo arredondado */
   clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
   border-top-right-radius: 48px;
   border-bottom-right-radius: 48px;
   will-change: clip-path;
 }
 
-/* Variante para a página de cadastro com imagem diferente */
-.imageCardRegister {
-  width: 100%;
-  height: 100%;
-  background-image: url("/assets/images/campos.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px 0 0 20px;
-  /* Aresta direita inclinada (invertida verticalmente) e topo arredondado */
-  clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
-  border-top-right-radius: 48px;
-  border-bottom-right-radius: 48px;
-  will-change: clip-path;
-}
-
-
-/* Seção do formulário à direita */
 .formSection {
   flex: 1;
   display: flex;
@@ -99,9 +80,10 @@
   flex-direction: column;
   justify-content: center;
   border-radius: 0 20px 20px 0;
+  animation: fadeInUp 0.6s ease-out;
+  animation-delay: 0.2s;
 }
 
-/* Título */
 .title {
   font-size: 28px;
   font-weight: 700;
@@ -110,14 +92,12 @@
   text-align: center;
 }
 
-/* Formulário */
 .form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Inputs */
 .input {
   padding: 14px 16px;
   border-radius: 12px;
@@ -139,7 +119,6 @@
   color: #9ca3af;
 }
 
-/* Botão */
 .button {
   margin-top: 8px;
   padding: 14px 16px;
@@ -170,7 +149,6 @@
   transform: none;
 }
 
-/* Texto de ajuda */
 .helper {
   margin-top: 20px;
   text-align: center;
@@ -178,7 +156,6 @@
   font-size: 14px;
 }
 
-/* Link */
 .link {
   color: #A283C8;
   text-decoration: none;
@@ -191,7 +168,6 @@
   text-decoration: underline;
 }
 
-/* Mensagem de erro */
 .error {
   color: #ef4444;
   font-size: 14px;
@@ -203,42 +179,30 @@
   border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .container {
     padding: 16px;
   }
-
   .content {
     flex-direction: column;
     max-width: 400px;
     height: auto;
     border-radius: 24px;
   }
-
   .imageSection {
     height: 250px;
   }
-
   .imageCard {
     border-radius: 20px 20px 0 0;
     clip-path: none;
   }
-
-  .imageCardRegister {
-    border-radius: 20px 20px 0 0;
-    clip-path: none;
-  }
-
   .formSection {
     height: auto;
   }
-
   .formCard {
     padding: 30px 24px;
     border-radius: 0 0 20px 20px;
   }
-
   .title {
     font-size: 24px;
   }
@@ -248,23 +212,18 @@
   .container {
     padding: 12px;
   }
-
   .content {
     max-width: 350px;
   }
-
   .imageSection {
     height: 200px;
   }
-
   .formCard {
     padding: 24px 20px;
   }
-
   .title {
     font-size: 22px;
   }
-
   .input,
   .button {
     padding: 12px 14px;
@@ -272,7 +231,6 @@
   }
 }
 
-/* Animações de entrada */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -284,7 +242,3 @@
   }
 }
 
-.formCard {
-  animation: fadeInUp 0.6s ease-out;
-  animation-delay: 0.2s;
-}
