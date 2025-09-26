@@ -18,7 +18,7 @@ const Hero = () => {
           <div className={styles.copy}> {/* Seção de texto (cópia) */}
             <h1 className={styles.title}>Neuro27 | Neurociência das Emoções</h1> {/* Título principal */}
             <p className={styles.subtitle}>
-              Aplicativo de Educação Neuropsicológica sobre Emoções e Neurotransmissores {/* Subtítulo/descrição */}
+              Tornando a educação emocional acessível, prática e envolvente.{/* Subtítulo/descrição */}
             </p>
             <div className={styles.actions}> {/* Container para as ações (botões) */}
               <button onClick={scrollToAbout} className={styles.ctaButton}> {/* Botão de Call to Action */}
