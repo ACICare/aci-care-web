@@ -19,7 +19,7 @@ export default function Settings() {
 		<div className={styles.section}>
 			<div className={styles.container}>
 				<h1>Settings</h1>
-				<p>Bem-vindo, {currentUser?.displayName || currentUser?.email}</p>
+				<p>Bem-vindo, {currentUser?.email}</p>
 				<button onClick={handleLogout} className={styles.button} style={{ marginTop: '20px' }}>
 					Sair
 				</button>
