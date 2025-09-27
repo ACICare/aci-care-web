@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { Brain, LogIn, Home, Book, LibraryBig, Circle } from "lucide-react";
+import { Brain, LogIn, Home, Book, LibraryBig, Circle, ChevronRight } from "lucide-react";
 import styles from './About.module.css';
 import frameUrl from '/assets/images/frame.png'; // Caminho para a imagem do frame do celular
 import { useLocation } from 'react-router-dom';
+
+
 
 const About = () => {
   const location = useLocation();
@@ -57,11 +59,26 @@ const About = () => {
           >
             <h1>Um jeito novo de aprender neurociência</h1>
             <ul className={styles.list}>
-              <li>Interface intuitiva</li>
-              <li>Mapa interativo do cérebro</li>
-              <li>Conteúdo dinâmico</li>
-              <li>Aprendizado gamificado</li>
-              <li>Design agradável</li>
+              <li className={styles.item}>
+                <ChevronRight className={styles.arrowIcon} />
+                Interface intuitiva
+              </li>
+              <li className={styles.item}>
+                <ChevronRight className={styles.arrowIcon} />
+                Mapa interativo do cérebro
+              </li>
+              <li className={styles.item}>
+                <ChevronRight className={styles.arrowIcon} />
+                Conteúdo dinâmico
+              </li>
+              <li className={styles.item}>
+                <ChevronRight className={styles.arrowIcon} />
+                Aprendizado gamificado
+              </li>
+              <li className={styles.item}>
+                <ChevronRight className={styles.arrowIcon} />
+                Design agradável
+              </li>
             </ul>
           </motion.div>
           <motion.div
@@ -148,8 +165,6 @@ const About = () => {
                 <motion.button
                   onClick={() => window.open('https://www.figma.com/design/UtfIs8YdDuaveNGiOGdCU8/Neuro27---Design-de-Telas?node-id=464-105&t=gOrHPwp5FxtqudBe-1', '_blank')} // Abre link do Figma em nova aba
                   className={styles.figmaButton}
-                  whileHover={{ scale: 1.05 }} // Efeito de escala ao passar o mouse
-                  whileTap={{ scale: 0.95 }} // Efeito de escala ao clicar
                 >
                   Ver Protótipo no Figma
                 </motion.button>
