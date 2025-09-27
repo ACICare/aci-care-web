@@ -1,3 +1,29 @@
+:root {
+  --primary-color: #ABD4FC;
+  --primary-color-dark: #001C2A;
+  --primary-color-light: #D0E5FB;
+  --primary-color-mid-dark: #667eea;
+
+
+
+  --secondary-color: #A283C8;
+  --secondary-color-dark: #764ba2;
+
+
+
+
+  --red-error-color: #ef4444;
+
+
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --light-gray-color: #9ca3af;
+  --text-dark-gray: #1a1a1a;
+
+}
+
+
+
 * {
   margin: 0;
   padding: 0;

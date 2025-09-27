@@ -104,7 +104,7 @@
   flex-direction: row; /* Linha por padrão (mobile) */
   align-items: center;
   padding: 0.75rem;
-  background-color: #ABD4FC; /* Cor de fundo da sidebar */
+  background-color: var(--primary-color); /* Cor de fundo da sidebar */
   backdrop-filter: blur(4px); /* Efeito de desfoque */
   border-radius: 9999px; /* Borda arredondada (pill shape) */
   width: auto;
@@ -135,7 +135,7 @@
   border-radius: 9999px;
   transition: all 0.3s; /* Transição suave para hover/active */
   margin: 0 0.25rem; /* Margem horizontal para mobile */
-  background-color: #ABD4FC; /* Cor de fundo padrão */
+  background-color: var(--primary-color); /* Cor de fundo padrão */
   border: none; /* Remove a borda padrão do botão */
   cursor: pointer;
 }
@@ -156,7 +156,7 @@
 
 /* Estilo para o botão de tab ativo */
 .tabButtonActive {
-  color: white;
+  color: var(--white-color);
   background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
 }
 
@@ -175,14 +175,14 @@
 .icon {
   width: 1.5rem;
   height: 1.5rem;
-  color: #001C2A; /* Cor do ícone */
+  color: var(--primary-color-dark); /* Cor do ícone */
 }
 
 /* Estilo para o ícone de círculo (tab inativa) */
 .circleIcon {
   width: 1rem;
   height: 1rem;
-  color: #001C2A;
+  color: var(--primary-color-dark);
 }
 
 /* ========================================= *
@@ -251,7 +251,7 @@
   overflow: hidden;
   border-radius: 18px;
   z-index: 0;
-  background-color: #1a1a1a; /* Fundo escuro para a tela */
+  background-color: var(--text-dark-gray); /* Fundo escuro para a tela */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,7 +335,7 @@
   max-width: 320px;
   text-align: center; /* Centraliza texto por padrão (mobile) */
   padding: 0 1rem;
-  color: #001C2A;
+  color: var(--primary-color-dark);
 }
 
 /* Media query para telas maiores que 640px (sm) */
@@ -378,7 +378,7 @@
 
 /* Destaque no título (parte do título que muda) */
 .titleAccent {
-  color: #000000;
+  color: var(--black-color);
   font-weight: 600;
 }
 
@@ -395,8 +395,8 @@
   transition: all 0.3s;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transform: scale(1);
-  background-color: #001C2A;
-  color: white;
+  background-color: var(--primary-color-dark);
+  color: var(--white-color);
   border: none; /* Remove a borda padrão do botão */
   cursor: pointer;
 }
