@@ -14,9 +14,9 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 16px;
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(var(--primary-color-dark), 0.3);
 	border-radius: 40px;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+	box-shadow: 0 10px 20px rgba(var(--primary-color-dark), 0.25);
   }
   
   /* Hamburger */
@@ -24,8 +24,8 @@
 	display: flex;
 	width: 36px;
 	height: 36px;
-	background: rgba(255,255,255,0.2);
-	border: 2px solid rgba(255,255,255,0.4);
+	background: rgba(var(--white-color), 0.2);
+	border: 2px solid rgba(var(--white-color), 0.4);
 	border-radius: 8px;
 	align-items: center;
 	justify-content: center;
@@ -33,13 +33,13 @@
 	z-index: 1000;
   }
   .menuButtonInner { display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all .3s ease; }
-  .bar { width: 20px; height: 2px; background: #fff; margin: 2px 0; transition: all .3s ease; }
+  .bar { width: 20px; height: 2px; background: var(--white-color); margin: 2px 0; transition: all .3s ease; }
   
   /* Desktop nav */
   .desktopNav { display: none; flex: 1; justify-content: center; }
   .menuList { display: flex; align-items: center; gap: 24px; list-style: none; margin: 0; padding: 0; }
   .menuLink {
-	color: #ffffff;
+	color: var(--white-color);
 	font-size: 16px;
 	padding: 8px 16px;
 	border-radius: 999px;
@@ -48,7 +48,7 @@
 	cursor: pointer;
 	transition: background .2s ease;
   }
-  .menuLink:hover { background: rgba(255,255,255,0.15); }
+  .menuLink:hover { background: rgba(var(--white-color), 0.15); }
   
   /* Botão Login - Desktop */
   .ctaSecondary {
@@ -56,7 +56,7 @@
 	align-items: center;
 	gap: 6px;
 	padding: 8px 16px;
-	color: #fff;
+	color: var(--white-color);
 	background: transparent;
 	border: none;
 	border-radius: 999px;
@@ -64,7 +64,7 @@
 	text-decoration: none;
 	transition: background .2s ease;
   }
-  .ctaSecondary:hover { background: rgba(255,255,255,0.15); }
+  .ctaSecondary:hover { background: rgba(var(--white-color), 0.15); }
   
   /* Mobile nav */
   .mobileNav {
@@ -75,7 +75,7 @@
 	width: 95%;
 	max-width: 1200px;
 	margin: 0 auto;
-	background: rgba(0,0,0,0.3);
+	background: rgba(var(--primary-color-dark), 0.3);
 	border-radius: 40px;
 	padding: 16px;
 	display: flex;
@@ -88,8 +88,8 @@
   }
   .mobileNavOpen { opacity: 1; visibility: visible; pointer-events: auto; }
   .mobileList { display: flex; flex-direction: column; gap: 8px; list-style: none; margin: 0; padding: 0; }
-  .mobileLink { color: #fff; width: 100%; text-align: center; padding: 8px 16px; border-radius: 10px; background: transparent; border: none; cursor: pointer; transition: background .2s ease; }
-  .mobileLink:hover { background: rgba(255,255,255,0.15); }
+  .mobileLink { color: var(--white-color); width: 100%; text-align: center; padding: 8px 16px; border-radius: 10px; background: transparent; border: none; cursor: pointer; transition: background .2s ease; }
+  .mobileLink:hover { background: rgba(var(--white-color), 0.15); }
   
   /* Botão Login - Mobile */
   .mobileCtaSecondary {
@@ -97,7 +97,7 @@
 	align-items: center;
 	gap: 6px;
 	padding: 8px 16px;
-	color: #fff;
+	color: var(--white-color);
 	background: transparent;
 	border: none;
 	border-radius: 999px;
@@ -105,7 +105,7 @@
 	text-decoration: none;
 	transition: background .2s ease;
   }
-  .mobileCtaSecondary:hover { background: rgba(255,255,255,0.15); }
+  .mobileCtaSecondary:hover { background: rgba(var(--white-color), 0.15); }
   
   /* Responsive */
   @media (min-width: 768px) {

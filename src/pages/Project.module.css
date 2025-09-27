@@ -1,6 +1,6 @@
 .projectSection {
-  min-height: 100vh; /* Altura mínima de 100% da viewport */
-  background-color: #001C2A; /* Cor de fundo escura */
+  min-height: 100vh; 
+  background-color: var(--primary-color-dark); 
   padding-top: 72px; /* Espaçamento no topo para acomodar o header fixo */
   display: flex;
   align-items: center;

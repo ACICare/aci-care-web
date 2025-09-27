@@ -10,8 +10,8 @@
   display: flex;
   align-items: center; /* Centraliza o conteúdo verticalmente */
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  background-color: #001C2A; /* Cor de fundo escura */
-  color: white; /* Cor do texto */
+  background-color: var(--primary-color-dark); /* Cor de fundo escura */
+  color: var(--white-color); /* Cor do texto */
   padding-top: 72px; /* Espaçamento no topo para acomodar o header fixo */
 }
 
@@ -85,8 +85,8 @@
 /* Botão de Call to Action (CTA) primário */
 .ctaButton {
   background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
-  border: 2px solid white;
-  color: white;
+  border: 2px solid var(--white-color);
+  color: var(--white-color);
   padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -97,21 +97,21 @@
 }
 
 .ctaButton:hover {
-  background: white;
-  color: #667eea; /* Cor do texto no hover */
+  background: var(--white-color);
+  color: var(--primary-color-mid-dark); /* Cor do texto no hover */
   transform: translateY(-2px); /* Efeito de elevação */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra no hover */
 }
 
 /* Botão de Call to Action (CTA) secundário */
 .ctaSecondary {
-	background: white;
+	background: var(--white-color);
 	color: #001C2A; /* Cor do texto contrastante */
 	padding: 1rem 1.5rem;
 	font-size: 1.05rem;
 	font-weight: 600;
 	border-radius: 50px;
-	border: 2px solid white;
+	border: 2px solid var(--white-color);
 	transition: all 0.3s ease;
 }
 
