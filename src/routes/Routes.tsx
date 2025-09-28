@@ -6,7 +6,6 @@ import Hero from '../pages/Hero';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Settings from '../pages/Settings';
-import Project from '../pages/Project';
 
 // Componentes
 import Header from '../components/Header';
@@ -36,7 +35,6 @@ function AppRoutes() {
             </PrivateRoute>
           }
         />
-        <Route path="/project" element={<Project />} />
       </Routes>
     </Router>
   );

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Brain, LogIn, Home, Book, LibraryBig, Circle } from "lucide-react";
 import styles from './Showcase.module.css';

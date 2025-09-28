@@ -1,6 +1,6 @@
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { User, LogOut, Construction, Info } from 'lucide-react';
+import { User, LogOut, Construction } from 'lucide-react';
 import styles from './Settings.module.css';
 
 export default function Settings() {
