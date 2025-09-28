@@ -1,0 +1,377 @@
+/* src/components/Showcase/Showcase.module.css */
+
+/* ========================================= *
+ *  Estilos Globais e de Layout da Página
+ * ========================================= */
+
+/* Estilos para a seção principal da página */
+.section {
+  min-height: 100vh; /* Garante que a seção ocupe a altura total da viewport */
+  display: flex;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 1rem; /* Preenchimento padrão para mobile */
+  position: relative;
+}
+
+/* Media query para telas maiores que 640px (sm) */
+@media (min-width: 640px) {
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+/* Media query para telas maiores que 1024px (lg) */
+@media (min-width: 1024px) {
+  .section {
+    padding: 2rem;
+  }
+}
+
+/* Container para a seção (sidebar e showcase) */
+.containerSecond {
+  display: flex;
+  flex-direction: column; /* Coluna por padrão (mobile) */
+  align-items: center; /* Alinha itens horizontalmente ao centro */
+  justify-content: center;
+  gap: 1.5rem; /* Espaçamento entre os itens */
+  max-width: 80rem; /* Largura máxima do container */
+  margin: 0 auto; /* Centraliza o container na página */
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Media query para telas maiores que 640px (sm) */
+@media (min-width: 640px) {
+  .containerSecond {
+    gap: 2rem;
+  }
+}
+
+/* Media query para telas maiores que 1024px (lg) */
+@media (min-width: 1024px) {
+  .containerSecond {
+    flex-direction: row; /* Linha para desktop */
+    gap: 4rem;
+  }
+}
+
+/* ========================================= *
+ *  Estilos da Sidebar (Navegação por Tabs)
+ * ========================================= */
+
+/* Container da sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: row; /* Linha por padrão (mobile) */
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--primary-color); /* Cor de fundo da sidebar */
+  backdrop-filter: blur(4px); /* Efeito de desfoque */
+  border-radius: 9999px; /* Borda arredondada (pill shape) */
+  width: auto;
+  height: 4rem;
+  order: 2; /* Ordem para mobile (abaixo do showcase) */
+}
+
+/* Media query para telas maiores que 640px (sm) */
+@media (min-width: 640px) {
+  .sidebar {
+    padding: 1rem;
+  }
+}
+
+/* Media query para telas maiores que 1024px (lg) */
+@media (min-width: 1024px) {
+  .sidebar {
+    flex-direction: column; /* Coluna para desktop */
+    width: 4rem;
+    height: auto;
+    order: 1; /* Ordem para desktop (acima do showcase) */
+  }
+}
+
+/* Botões individuais das tabs */
+.tabButton {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  transition: all 0.3s; 
+  margin: 0 0.25rem; 
+  background-color: var(--primary-color); /* Cor de fundo padrão */
+  border: none; /* Remove a borda padrão do botão */
+  cursor: pointer;
+}
+
+/* Media query para telas maiores que 640px (sm) */
+@media (min-width: 640px) {
+  .tabButton {
+    padding: 0.75rem;
+  }
+}
+
+/* Media query para telas maiores que 1024px (lg) */
+@media (min-width: 1024px) {
+  .tabButton {
+    margin: 0 0 0.5rem 0; /* Margem vertical para desktop */
+  }
+}
+
+/* Estilo para o botão de tab ativo */
+.tabButtonActive {
+  color: var(--white-color);
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+}
+
+/* Estilo para o botão de tab inativo */
+.tabButtonInactive {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Efeito hover para botões inativos */
+.tabButtonInactive:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo para ícones dentro dos botões */
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary-color-dark); /* Cor do ícone */
+}
+
+/* Estilo para o ícone de círculo (tab inativa) */
+.circleIcon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--primary-color-dark);
+}
+
+/* ========================================= *
+ *  Estilos do Showcase (Mockup do Telefone)
+ * ========================================= */
+
+/* Container principal do showcase */
+.showcase {
+  display: flex;
+  flex-direction: column; /* Coluna por padrão (mobile) */
+  align-items: center;
+  gap: 1.5rem;
+  order: 1; /* Ordem para mobile (acima da sidebar) */
+}
+
+/* Media query para telas maiores que 640px (sm) */
+@media (min-width: 640px) {
+  .showcase {
+    gap: 2rem;
+  }
+}
+
+/* Media query para telas maiores que 1024px (lg) */
+@media (min-width: 1024px) {
+  .showcase {
+    flex-direction: row; /* Linha para desktop */
+    gap: 4rem;
+    order: 2; /* Ordem para desktop (depois da sidebar) */
+  }
+}
+
+/* Container do mockup do telefone */
+.phoneContainer {
+  position: relative;
+  height: 450px;
+  width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media query para telas maiores que 640px (sm) */
+@media (min-width: 640px) {
+  .phoneContainer {
+    height: 400px;
+    width: 240px;
+  }
+}
+
+/* Media query para telas maiores que 1024px (lg) */
+@media (min-width: 1024px) {
+  .phoneContainer {
+    height: 500px;
+    width: 300px;
+    justify-content: flex-start; /* Alinha à esquerda no desktop */
+  }
+}
+
+/* Tela interna do telefone (onde a imagem do app aparece) */
+.phoneScreen {
+  position: absolute;
+  top: 2%;
+  left: 12%;
+  height: 96%;
+  width: 76%;
+  overflow: hidden;
+  border-radius: 18px;
+  z-index: 0;
+  background-color: var(--text-dark-gray); /* Fundo escuro para a tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media query para telas maiores que 640px (sm) */
+@media (min-width: 640px) {
+  .phoneScreen {
+    top: 2%;
+    left: 12%;
+    height: 97%;
+    width: 76%;
+    border-radius: 25px;
+  }
+}
+
+/* Media query para telas maiores que 768px (md) */
+@media (min-width: 768px) {
+  .phoneScreen {
+    top: 2%;
+    left: 12%;
+    height: 97%;
+    width: 76%;
+  }
+}
+
+/* Media query para telas maiores que 1024px (lg) */
+@media (min-width: 1024px) {
+  .phoneScreen {
+    top: 2%;
+    left: 2%;
+    height: 97%;
+    width: 230px;
+    border-radius: 30px;
+  }
+}
+
+/* Imagem do aplicativo dentro da tela do telefone */
+.phoneImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Garante que a imagem cubra todo o espaço */
+  border-radius: inherit; /* Herda o border-radius do pai */
+}
+
+/* Placeholder para quando não há imagem */
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  border-radius: inherit;
+}
+
+/* Texto do placeholder */
+.placeholderText {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Frame (moldura) do telefone */
+.phoneFrame {
+  position: relative;
+  z-index: 10; /* Garante que o frame fique acima da tela */
+  height: 100%;
+  width: auto;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15)); /* Sombra para profundidade */
+}
+
+/* ========================================= *
+ *  Estilos do Conteúdo de Texto (Showcase)
+ * ========================================= */
+
+/* Container do conteúdo de texto */
+.textContent {
+  max-width: 320px;
+  text-align: center; /* Centraliza texto por padrão (mobile) */
+  padding: 0 1rem;
+  color: var(--primary-color-dark);
+}
+
+/* Media query para telas maiores que 640px (sm) */
+@media (min-width: 640px) {
+  .textContent {
+    max-width: 400px;
+    padding: 0;
+  }
+}
+
+/* Media query para telas maiores que 1024px (lg) */
+@media (min-width: 1024px) {
+  .textContent {
+    max-width: 550px;
+    text-align: left; /* Alinha texto à esquerda no desktop */
+  }
+}
+
+/* Título principal do showcase */
+.title {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+/* Media query para telas maiores que 640px (sm) */
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Media query para telas maiores que 1024px (lg) */
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+/* Destaque no título (parte do título que muda) */
+.titleAccent {
+  color: var(--black-color);
+  font-weight: 600;
+}
+
+/* Texto normal do título */
+.titleText {
+  color: rgb(0, 0, 0);
+}
+
+/* Botão para o Figma */
+.figmaButton {
+    background: rgba(255, 255, 255, 0.2); 
+    border: 1.5px solid var(--text-dark-gray);
+    border-radius: 30px; 
+
+    color: var(--text-dark-gray);
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    padding: 0.7rem 1.7rem;  
+    backdrop-filter: blur(10px);
+
+
+  transition: all 0.3s ease; 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+ 
+}
+.figmaButton:hover {
+  background: var(--primary-color-mid-dark);
+  color: var(--white-color);
+  transform: translateY(-2px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+  border: 1.5px solid var(--primary-color-mid-dark);
+}
