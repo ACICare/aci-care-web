@@ -3,8 +3,8 @@ import { useAuth } from './contexts/AuthContext';
 
 // Pages
 import Hero from './pages/Hero';
+import Application from './pages/Application';
 import About from './pages/About';
-import Project from './pages/Project';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Settings from './pages/Settings';
@@ -20,7 +20,7 @@ function AppRoutes() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<><Hero /><About /><Project /></>} />
+        <Route path="/" element={<><Hero /><Application /><About /></>} />
         <Route path="/login" element={currentUser ? <Navigate to="/settings" /> : <Login />} />
         <Route path="/register" element={currentUser ? <Navigate to="/settings" /> : <Register />} />
         <Route path="/settings" element={<PrivateRoute><Settings /></PrivateRoute>} />

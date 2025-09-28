@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Brain, LogIn, Home, Book, LibraryBig, Circle } from "lucide-react";
 import styles from './Showcase.module.css';
@@ -17,10 +17,26 @@ import conteudoScreen from '/assets/images/screens-showcase/conteudo.png';
 const Showcase = () => {
   // Estado para controlar qual tab está ativa no showcase
   const [activeIndex, setActiveIndex] = useState(0);
+  
+  // Estado para controlar a animação de piscada
+  const [isFlashing, setIsFlashing] = useState(false);
 
   // Referência para a seção, usada para detectar quando ela entra na viewport (para animações)
   const sectionRef = useRef(null);
   const isSectionInView = useInView(sectionRef, { once: true, amount: 0.3 });
+
+  // Função para trocar de tab com animação de piscada
+  const handleTabChange = (index: number) => {
+    if (index !== activeIndex) {
+      setIsFlashing(true);
+      setTimeout(() => {
+        setActiveIndex(index);
+        setTimeout(() => {
+          setIsFlashing(false);
+        }, 150);
+      }, 150);
+    }
+  };
 
   // Definição das tabs com seus ícones, títulos, descrições e imagens correspondentes
   const tabs = [
@@ -49,7 +65,7 @@ const Showcase = () => {
             <motion.button
               key={index}
               className={`${styles.tabButton} ${index === activeIndex ? styles.tabButtonActive : styles.tabButtonInactive}`}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => handleTabChange(index)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -72,7 +88,7 @@ const Showcase = () => {
             transition={{ duration: 0.9, delay: 0.8 }}
             className={styles.phoneContainer}
           >
-            <div className={styles.phoneScreen}>
+            <div className={`${styles.phoneScreen} ${isFlashing ? styles.flashEffect : ''}`}>
               {tabs[activeIndex].imageSrc ? (
                 <img src={tabs[activeIndex].imageSrc} alt={tabs[activeIndex].title} className={styles.phoneImage} />
               ) : (

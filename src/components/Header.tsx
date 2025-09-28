@@ -10,8 +10,8 @@ export default function Header() {
 
   const menuItems = [
     { name: 'Home', id: 'home' },
+    { name: 'Aplicativo', id: 'app' },
     { name: 'Sobre', id: 'about' },
-    { name: 'Projeto', id: 'project' },
   ];
 
   const scrollToSection = (sectionId: string) => {
