@@ -1,14 +1,25 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Linkedin, Instagram, Github } from "lucide-react";
 import styles from './About.module.css';
 
 const About = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  // Ajusta a detecção de viewport para mobile - reduz o threshold para 0.1 (10%)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  
+  // Detecta se é um dispositivo móvel
+  const isMobile = window.innerWidth <= 768;
 
   // Garante que o scroll seja mantido durante as animações
   useEffect(() => {
+    // Marca como carregado imediatamente no mobile
+    if (isMobile) {
+      setIsLoaded(true);
+    }
+    
     const checkScroll = () => {
       const bodyHeight = document.body.scrollHeight;
       const windowHeight = window.innerHeight;
@@ -21,7 +32,10 @@ const About = () => {
     };
 
     // Verifica o scroll após um pequeno delay para permitir que as animações se estabilizem
-    const timeoutId = setTimeout(checkScroll, 100);
+    const timeoutId = setTimeout(() => {
+      checkScroll();
+      setIsLoaded(true);
+    }, 100);
     
     // Também verifica quando a animação termina
     const observer = new MutationObserver(checkScroll);
@@ -34,7 +48,7 @@ const About = () => {
       document.documentElement.style.overflowY = '';
       document.body.style.overflowY = '';
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <motion.section
@@ -46,17 +60,17 @@ const About = () => {
       <div className={styles.container}>
         <motion.div
           className={styles.content}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={isMobile || isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={isMobile || isLoaded ? { opacity: 1, y: 0 } : (isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 })}
+          transition={isMobile || isLoaded ? { duration: 0 } : { duration: 0.8, delay: 0.2 }}
         >
           <div className={styles.layout}>
             <div className={styles.imageSection}>
               <motion.div
                 className={styles.imageGrid}
-                initial={{ opacity: 0, x: -50 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={isMobile || isLoaded ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                animate={isMobile || isLoaded ? { opacity: 1, x: 0 } : (isInView ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 })}
+                transition={isMobile || isLoaded ? { duration: 0 } : { duration: 0.8, delay: 0.4 }}
               >
                 <div className={styles.mainImage}>
                   <img 
