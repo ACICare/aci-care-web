@@ -40,7 +40,8 @@ const About = () => {
             animate={isFirstSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Animação quando visível
             transition={{ duration: 0.7, delay: 0.4 }} // Duração e delay da transição (ajustado para 0.7s e 0.4s)
           >
-            <h1>Um jeito novo de aprender neurociência</h1>
+            <h1 className={styles.titleAccent}>Um jeito novo de aprender <span>neurociência</span></h1>
+            
             <ul className={styles.list}>
               <li className={styles.item}>
                 <ChevronRight className={styles.arrowIcon} />

@@ -2,7 +2,17 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Brain, LogIn, Home, Book, LibraryBig, Circle } from "lucide-react";
 import styles from './Showcase.module.css';
-import frameUrl from '/assets/images/frame.png';
+
+
+
+import frameUrl from '/assets/images/screens-showcase/frame.png';
+import outsetScreen from '/assets/images/screens-showcase/outset.png';
+import loginScreen from '/assets/images/screens-showcase/login.png';
+import homeScreen from '/assets/images/screens-showcase/home.png';
+import capitulosScreen from '/assets/images/screens-showcase/capitulos.png';
+import conteudoScreen from '/assets/images/screens-showcase/conteudo.png';
+
+
 
 const Showcase = () => {
   // Estado para controlar qual tab está ativa no showcase
@@ -14,11 +24,11 @@ const Showcase = () => {
 
   // Definição das tabs com seus ícones, títulos, descrições e imagens correspondentes
   const tabs = [
-    { label: <Brain className={styles.icon} />, title: "Outset", description: "Descubra o Neuro27! Crie sua conta ou faça login para começar.", imageSrc: "/assets/images/outset.png" },
-    { label: <LogIn className={styles.icon} />, title: "Tela de Login", description: "Acesse sua conta para continuar aprendendo de forma personalizada.", imageSrc: "/assets/images/login.png" },
-    { label: <Home className={styles.icon} />, title: "Home", description: "Siga nossa estrutura recomendada e aprenda da forma mais eficiente!", imageSrc: "/assets/images/#.png" },
-    { label: <Book className={styles.icon} />, title: "Capítulos", description: "Aprenda capítulo por capítulo, facilitando a compreensão e retenção.", imageSrc: "/assets/images/#.png" },
-    { label: <LibraryBig className={styles.icon} />, title: "Conteúdo", description: "Explore e estude os conteúdos detalhados de cada capítulo.", imageSrc: "/assets/images/#.png" },
+    { label: <Brain className={styles.icon} />, title: "Outset", description: "Descubra o Neuro27! Crie sua conta ou faça login para começar.", imageSrc: outsetScreen },
+    { label: <LogIn className={styles.icon} />, title: "Tela de Login", description: "Acesse sua conta para continuar aprendendo de forma personalizada.", imageSrc: loginScreen },
+    { label: <Home className={styles.icon} />, title: "Home", description: "Siga nossa estrutura recomendada e aprenda da forma mais eficiente!", imageSrc: homeScreen },
+    { label: <Book className={styles.icon} />, title: "Capítulos", description: "Aprenda capítulo por capítulo, facilitando a compreensão e retenção.", imageSrc: capitulosScreen },
+    { label: <LibraryBig className={styles.icon} />, title: "Conteúdo", description: "Explore e estude os conteúdos detalhados de cada capítulo.", imageSrc: conteudoScreen },
   ];
 
   return (
