@@ -1,5 +1,4 @@
-
-/* src/components/About/About.module.css */
+/* src/components/Showcase/Showcase.module.css */
 
 /* ========================================= *
  *  Estilos Globais e de Layout da Página
@@ -29,23 +28,7 @@
   }
 }
 
-/* Container para a primeira seção (texto e imagem inicial) */
-.container {
-  display: grid;
-  grid-template-columns: 1fr; /* Uma coluna por padrão (mobile) */
-  gap: 20px; /* Espaçamento entre os itens do grid */
-  padding: 20px;
-  align-items: center; /* Alinha itens verticalmente ao centro */
-}
-
-/* Media query para telas maiores que 768px (md) */
-@media (min-width: 768px) {
-  .container {
-    grid-template-columns: 1fr 1fr; /* Duas colunas para desktop */
-  }
-}
-
-/* Container para a segunda seção (sidebar e showcase) */
+/* Container para a seção (sidebar e showcase) */
 .containerSecond {
   display: flex;
   flex-direction: column; /* Coluna por padrão (mobile) */
@@ -71,60 +54,6 @@
     flex-direction: row; /* Linha para desktop */
     gap: 4rem;
   }
-}
-
-/* ========================================= *
- *  Estilos da Primeira Seção (Texto e Imagem)
- * ========================================= */
-
-/* Seção de texto */
-.textSection {
-  padding: 20px;
-}
-
-/*Lista*/
-.list {
-  padding-left: 0;
-  list-style: none;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  margin-left: 1.2rem;
-  font-size: 1.2rem !important;
-  color: rgb(0, 0, 0);
-}
-
-.arrowIcon {
-  margin-right: 0.5rem;
-  color: var(--primary-color);
-  font-size: 1.2rem;
-}
-
-
-.titleAccent {
-  font-weight: 600;
-  font-size: 3rem !important;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-}
-.titleAccent span {
-  color: var(--primary-color-mid-dark);
-  
-}
-
-
-
-
-/* Seção de imagem */
-.imageSection {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* ========================================= *
@@ -389,36 +318,43 @@
 
 /* Título principal do showcase */
 .title {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   line-height: 1.25;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
+/* Destaque no título (parte do título que muda) */
+.titleAccent {
+  font-weight: 600;
+  font-size: 4.5rem !important;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Texto da descrição */
+.titleText {
+  font-size: 1.5rem !important;
+  color: rgb(0, 0, 0);
+}
+
 /* Media query para telas maiores que 640px (sm) */
 @media (min-width: 640px) {
   .title {
-    font-size: 1.875rem;
+    font-size: 1.2rem !important;
   }
 }
 
 /* Media query para telas maiores que 1024px (lg) */
 @media (min-width: 1024px) {
   .title {
-    font-size: 3rem;
+    font-size: 1.5rem !important;
   }
 }
 
-/* Destaque no título (parte do título que muda) */
-.titleAccent {
-  color: var(--black-color);
-  font-weight: 600;
-}
 
-/* Texto normal do título */
-.titleText {
-  color: rgb(0, 0, 0);
-}
+
 
 /* Botão para o Figma */
 .figmaButton {
@@ -440,10 +376,8 @@
  
 }
 .figmaButton:hover {
-  background: var(--primary-color-mid-dark);
-  color: var(--white-color);
+  background: var(--primary-color);
   transform: translateY(-2px); 
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
-  border: 1.5px solid var(--primary-color-mid-dark);
+  border: 1.5px solid var(--primary-color);
 }
-

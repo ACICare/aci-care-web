@@ -42,7 +42,7 @@
 
 /* Título principal */
 .title {
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no texto para dar profundidade */
@@ -85,12 +85,12 @@
 /* Botão de Call to Action (CTA) primário */
 .ctaButton {
   background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
-  border: 2px solid var(--white-color);
+  border: 1.5px solid var(--white-color);
   color: var(--white-color);
-  padding: 1rem 2rem;
+  padding: 0.7rem 1.7rem;
   font-size: 1.1rem;
   font-weight: 600;
-  border-radius: 50px; /* Borda arredondada */
+  border-radius: 30px; /* Borda arredondada */
   cursor: pointer;
   transition: all 0.3s ease; /* Transição suave para hover */
   backdrop-filter: blur(10px); /* Efeito de vidro fosco no fundo */
