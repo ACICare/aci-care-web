@@ -136,7 +136,7 @@
 }
 
 .input::placeholder {
-  color: var(--light-gray-color);
+  color: var(--text-dark-gray);
 }
 
 /* Botão */
@@ -174,7 +174,7 @@
 .helper {
   margin-top: 20px;
   text-align: center;
-  color: var(--light-gray-color);
+  color: var(--text-dark-gray);
   font-size: 14px;
 }
 
