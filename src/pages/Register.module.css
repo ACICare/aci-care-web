@@ -9,22 +9,6 @@
   position: relative;
 }
 
-/* Imagem de fundo ocupando 55% da largura com corte diagonal */
-.container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 55%;
-  height: 100%;
-  background-image: url("/assets/images/campos.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
-  z-index: 1;
-}
-
 /* Container do conteúdo principal */
 .content {
   display: flex;
@@ -51,33 +35,13 @@
   padding: 10px;
 }
 
-.imageCard {
-  width: 100%;
-  height: 100%;
-  background-image: url("/assets/images/noite.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px 0 0 20px;
-  /* Aresta direita inclinada (invertida verticalmente) e topo arredondado */
-  clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
-  border-top-right-radius: 48px;
-  border-bottom-right-radius: 48px;
-  will-change: clip-path;
-}
-
-/* Variante para a página de cadastro com imagem diferente */
 .imageCardRegister {
   width: 100%;
   height: 100%;
-  background-image: url("/assets/images/campos.jpg");
+  background-image: url("/assets/images/logo.png");
   background-size: cover;
   background-position: center;
   border-radius: 20px 0 0 20px;
-  /* Aresta direita inclinada (invertida verticalmente) e topo arredondado */
-  clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
-  border-top-right-radius: 48px;
-  border-bottom-right-radius: 48px;
-  will-change: clip-path;
 }
 
 

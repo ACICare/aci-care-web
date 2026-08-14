@@ -26,7 +26,6 @@ const Application = () => {
 
   return (
     <>
-      {/* Primeira Seção: Introdução (Um jeito novo de aprender neurociência) */}
       <motion.section
         id="app" // ID para navegação
         ref={firstSectionRef} // Referência para o hook useInView
@@ -40,7 +39,7 @@ const Application = () => {
             animate={isFirstSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Animação quando visível
             transition={{ duration: 0.7, delay: 0.4 }} // Duração e delay da transição (ajustado para 0.7s e 0.4s)
           >
-            <h1 className={styles.titleAccent}>Um jeito novo de aprender <span>neurociência</span></h1>
+            <h1 className={styles.titleAccent}>Tecnologia inteligente para cuidar da <span>terceira idade </span></h1>
             
             <ul className={styles.list}>
               <li className={styles.item}>
@@ -49,19 +48,19 @@ const Application = () => {
               </li>
               <li className={styles.item}>
                 <ChevronRight className={styles.arrowIcon} />
-                Mapa interativo do cérebro
+                Monitoramento em tempo real
               </li>
               <li className={styles.item}>
                 <ChevronRight className={styles.arrowIcon} />
-                Conteúdo dinâmico
+                Detecção de quedas e inatividade
               </li>
               <li className={styles.item}>
                 <ChevronRight className={styles.arrowIcon} />
-                Aprendizado gamificado
+                Botão de emergência (SOS)
               </li>
               <li className={styles.item}>
                 <ChevronRight className={styles.arrowIcon} />
-                Design agradável
+                Alertas instantâneos para familiares (SOS)
               </li>
             </ul>
           </motion.div>
@@ -71,19 +70,10 @@ const Application = () => {
             animate={isFirstSectionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }} // Animação quando visível
             transition={{ duration: 0.8, delay: 0.6 }} // Duração e delay da transição (ajustado para 0.8s e 0.6s)
           >
-            <img src="/assets/images/Telas.png" alt="Telas do aplicativo Neuro27" /> {/* Imagem principal */}
+            <img src="/assets/images/telas.png" alt="Telas do aplicativo ACI Care" /> {/* Imagem principal */}
           </motion.div>
         </div>
       </motion.section>
-
-
-
-
-
-
-
-
-
 
       {/* Segunda Seção: Showcase com Tabs e Mockup de Celular */}
       <Showcase />

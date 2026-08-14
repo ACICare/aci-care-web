@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { Linkedin, Instagram, Github } from "lucide-react";
+import { Instagram, Github } from "lucide-react";
 import styles from './About.module.css';
 
 const About = () => {
@@ -74,20 +74,20 @@ const About = () => {
               >
                 <div className={styles.mainImage}>
                   <img 
-                    src="/assets/images/setup.jpg" 
-                    alt="Logo Neuro27" 
+                    src="/assets/images/grupo.jpeg"
+                    alt="Grupo do projeto" 
                     className={styles.projectImage}
                   />
                 </div>
                 <div className={styles.secondaryImages}>
                   <img 
-                    src="/assets/images/setup2.jpg" 
-                    alt="Ambiente de trabalho" 
+                    src="/assets/images/grupo2.jpeg" 
+                    alt="Atividade realizadas" 
                     className={styles.secondaryImage}
                   />
                   <img 
-                    src="/assets/images/setup3.jpg" 
-                    alt="Desenvolvimento noturno" 
+                    src="/assets/images/juntos.jpeg" 
+                    alt="Atividades realizada" 
                     className={styles.secondaryImage}
                   />
                 </div>
@@ -99,16 +99,11 @@ const About = () => {
           
               <div className={styles.projectInfo}>
                 <p className={styles.description}>
-                  O Neuro27 é um aplicativo educacional voltado à alfabetização emocional, baseado em 
-                  neurociência, psicologia e teorias modernas de inteligência emocional. A proposta surge 
-                  da crescente necessidade de aproximar o conhecimento científico sobre as emoções e o 
-                  funcionamento cerebral do cotidiano das pessoas, especialmente jovens.
+                O ACI Care é um dispositivo vestível inteligente desenvolvido para auxiliar no monitoramento e cuidado de idosos. Através de sensores, alertas em tempo real e um botão de emergência, a solução oferece mais segurança, independência e qualidade de vida para os usuários, além de proporcionar tranquilidade para familiares e cuidadores.
                 </p>
                 
                 <p className={styles.description}>
-                  Com o avanço das tecnologias digitais, identificou-se a oportunidade de aplicar 
-                  conceitos científicos de forma divertida, educativa e interativa, aproveitando o 
-                  potencial dos dispositivos móveis para democratizar o acesso à educação socioemocional.
+                  Combinando IoT, computação em nuvem e monitoramento remoto, o ACI Care transforma tecnologia em cuidado, conectando pessoas e promovendo um envelhecimento mais seguro e ativo.
                 </p>
               </div>
             </div>
@@ -118,12 +113,12 @@ const About = () => {
             <h3>Resultados Preliminares:</h3>
             <div className={styles.stats}>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>80%+</span>
-                <span className={styles.statLabel}>dos participantes relatam dificuldade em compreender conceitos neurocientíficos</span>
+                <span className={styles.statNumber}>97,6%</span>
+                <span className={styles.statLabel}>dos participantes acreditam que nosso dispositivo pode ajudar no monitoramento dos idosos</span>
               </div>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>Alta</span>
-                <span className={styles.statLabel}>aceitação e interesse pela abordagem educacional</span>
+                <span className={styles.statNumber}>Apoio total</span>
+                <span className={styles.statLabel}>Por profissionais da área realizada na pesquisa de campo</span>
               </div>
             </div>
           </div>
@@ -134,23 +129,20 @@ const About = () => {
               <div className={styles.member}>
                 <div className={styles.memberPhoto}>
                   <img 
-                    src="/assets/images/ivan.jpg" 
-                    alt="Ivan Henrique" 
+                    src="/assets/images/caetano.png" 
+                    alt="João Caetano" 
                     className={styles.memberImage}
                   />
                   <div className={styles.socialOverlay}>
-                    <a href="https://www.linkedin.com/in/ivanhrq/" target="_blank" className={styles.socialLink} title="LinkedIn">
-                      <Linkedin size={16} />
-                    </a>
-                    <a href="https://www.instagram.com/ivanhrq/" target="_blank" className={styles.socialLink} title="Instagram">
+                    <a href="https://www.instagram.com/ijoaocaetano/" target="_blank" className={styles.socialLink} title="Instagram">
                       <Instagram size={16} />
                     </a>
-                    <a href="https://github.com/Iwanhrq" target="_blank" className={styles.socialLink} title="GitHub">
+                    <a href="https://github.com/ijoaocaetano" target="_blank" className={styles.socialLink} title="GitHub">
                       <Github size={16} />
                     </a>
                   </div>
                 </div>
-                <h4>Ivan Henrique</h4>
+                <h4>João Caetano</h4>
                 <div className={styles.memberRoles}>
                   <span className={styles.role}>Design</span>
                   <span className={styles.role}>Programação</span>
@@ -158,27 +150,43 @@ const About = () => {
                   <span className={styles.role}>Testes</span>
                 </div>
               </div>
-              
-              <div className={styles.member}>
+
+                <div className={styles.member}>
                 <div className={styles.memberPhoto}>
                   <img 
-                    src="/assets/images/mari.jpg" 
-                    alt="Mariana Araripe" 
+                    src="/assets/images/alan.jpeg"
+                    alt="Alan Pereira" 
                     className={styles.memberImage}
                   />
                   <div className={styles.socialOverlay}>
-                    <a href="https://www.linkedin.com/in/marianaararipe/" target="_blank" className={styles.socialLink} title="LinkedIn">
-                      <Linkedin size={16} />
-                    </a>
-                    <a href="https://www.instagram.com/araripemariana/" target="_blank" className={styles.socialLink} title="Instagram">
+                    <a href="https://www.instagram.com/bigu.alan/" target="_blank" className={styles.socialLink} title="Instagram">
                       <Instagram size={16} />
-                    </a>
-                    <a href="https://github.com/marianaararipe" target="_blank" className={styles.socialLink} title="GitHub">
-                      <Github size={16} />
                     </a>
                   </div>
                 </div>
-                <h4>Mariana Araripe</h4>
+                <h4>Alan Pereira</h4>
+                <div className={styles.memberRoles}>
+                  <span className={styles.role}>Design</span>
+                  <span className={styles.role}>Documentação</span>
+                  <span className={styles.role}>Programação</span>
+                  <span className={styles.role}>Pesquisa</span>
+                </div>
+              </div>
+              
+             <div className={styles.member}>
+                <div className={styles.memberPhoto}>
+                  <img 
+                    src="/assets/images/ingrid.jpeg"
+                    alt="Ingrid Graci" 
+                    className={styles.memberImage}
+                  />
+                  <div className={styles.socialOverlay}>
+                    <a href="https://www.instagram.com/ingridgraci_/" target="_blank" className={styles.socialLink} title="Instagram">
+                      <Instagram size={16} />
+                    </a>
+                  </div>
+                </div>
+                <h4>Ingrid Graci</h4>
                 <div className={styles.memberRoles}>
                   <span className={styles.role}>Design</span>
                   <span className={styles.role}>Documentação</span>

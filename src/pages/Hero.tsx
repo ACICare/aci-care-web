@@ -38,14 +38,14 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-            >Neuro27 | Neurociência das Emoções</motion.h1> {/* Título principal */}
+            >ACI - Care | Assistente Computadorizado para idosos</motion.h1> {/* Título principal */}
             <motion.p 
               className={styles.subtitle}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Tornando a educação emocional acessível, prática e envolvente.{/* Subtítulo/descrição */}
+              Tornando o cuidado com idosos mais seguro, acessível e inteligente.{/* Subtítulo/descrição */}
             </motion.p>
             <motion.div 
               className={styles.actions}

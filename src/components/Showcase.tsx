@@ -1,16 +1,16 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { Brain, LogIn, Home, Book, LibraryBig, Circle } from "lucide-react";
+import { LogIn, Home, Circle, Pill, Tablets, User } from "lucide-react";
 import styles from './Showcase.module.css';
 
 
 
 import frameUrl from '/assets/images/screens-showcase/frame.png';
-import outsetScreen from '/assets/images/screens-showcase/outset.png';
-import loginScreen from '/assets/images/screens-showcase/login.png';
+import login from '/assets/images/screens-showcase/login.png';
+import cadastro from '/assets/images/screens-showcase/cadastro.png';
 import homeScreen from '/assets/images/screens-showcase/home.png';
-import capitulosScreen from '/assets/images/screens-showcase/capitulos.png';
-import conteudoScreen from '/assets/images/screens-showcase/conteudo.png';
+import alerta from '/assets/images/screens-showcase/alerta.png';
+import medicamento from '/assets/images/screens-showcase/medicamento.png';
 
 
 
@@ -40,11 +40,11 @@ const Showcase = () => {
 
   // Definição das tabs com seus ícones, títulos, descrições e imagens correspondentes
   const tabs = [
-    { label: <Brain className={styles.icon} />, title: "Outset", description: "Descubra o Neuro27! Crie sua conta ou faça login para começar.", imageSrc: outsetScreen },
-    { label: <LogIn className={styles.icon} />, title: "Tela de Login", description: "Acesse sua conta para continuar aprendendo de forma personalizada.", imageSrc: loginScreen },
-    { label: <Home className={styles.icon} />, title: "Home", description: "Siga nossa estrutura recomendada e aprenda da forma mais eficiente!", imageSrc: homeScreen },
-    { label: <Book className={styles.icon} />, title: "Capítulos", description: "Aprenda capítulo por capítulo, facilitando a compreensão e retenção.", imageSrc: capitulosScreen },
-    { label: <LibraryBig className={styles.icon} />, title: "Conteúdo", description: "Explore e estude os conteúdos detalhados de cada capítulo.", imageSrc: conteudoScreen },
+    { label: <User className={styles.icon} />, title: "Login", description: "Utilize ACI Care! Crie sua conta ou faça login para começar e cadastre o idoso.", imageSrc: login },
+    { label: <LogIn className={styles.icon} />, title: "Tela de Cadastro", description: "Acesse sua conta para monitorar os dados do idoso.", imageSrc: cadastro },
+    { label: <Home className={styles.icon} />, title: "Home", description: "Acompanhe os dados em tempo real!", imageSrc: homeScreen },
+    { label: <Pill className={styles.icon} />, title: "Alertas", description: "Veja as últimas atividades do idoso.", imageSrc: alerta },
+    { label: <Tablets  className={styles.icon} />, title: "Medicamento", description: "Cadastre os rémedios, programe o horário e a quantidade.", imageSrc: medicamento },
   ];
 
   return (
@@ -118,7 +118,7 @@ const Showcase = () => {
 
               {/* Botão para o Figma */}
               <motion.button
-                onClick={() => window.open('https://www.figma.com/design/UtfIs8YdDuaveNGiOGdCU8/Neuro27---Design-de-Telas?node-id=464-105&t=gOrHPwp5FxtqudBe-1', '_blank')}
+                onClick={() => window.open('https://www.figma.com/design/TNWW21MJmWB6HPtUoWFowU/ACI-Care---TCC?node-id=0-1&p=f&t=KWYp5dOc5M4DkYNh-0', '_blank')}
                 className={styles.figmaButton}
               >
                 Ver Protótipo no Figma

@@ -1,11 +1,13 @@
 :root {
-  --primary-color: #ABD4FC;
-  --primary-color-dark: #001C2A;
-  --primary-color-light: #D0E5FB;
-  --primary-color-mid-dark: #667eea;
+    /* Cores Primárias */
+  --primary-color: #ABB9BF;          /* Azul claro da logo */
+  --primary-color-dark: #556771;     /* Cinza-azulado da pulseira */
+  --primary-color-light: #F2F1ED;    /* Fundo */
+  --primary-color-mid-dark: #A67B7C; /* Rosa do coração */
 
-  --secondary-color: #A283C8;
-  --secondary-color-dark: #764ba2;
+  /* Cores secundárias */
+  --secondary-color: #544145;        /* Bordô */
+  --secondary-color-dark: #051618;   /* Preto/azul escuro do relógio */
 
   --red-error-color: #ef4444;
 
